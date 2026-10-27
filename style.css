@@ -1,0 +1,131 @@
+/* --------------------------------------------------
+   ១. Global Styles (កំណត់ទូទៅ)
+-------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Battambang', cursive, sans-serif;
+}
+/* --------------------------------------------------
+   ២. Background Style (ផ្ទៃខាងក្រោយមានរូបភាព)
+-------------------------------------------------- */
+body {
+    /* ដាក់រូបភាព Background និងបន្ថែមស្រទាប់ពណ៌ខ្មៅស្រាល (Overlay) ដើម្បីឲ្យ Form លេចច្បាស់ */
+    background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), 
+                url(../codeចុះឈ្មោះ/p2.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+/* --------------------------------------------------
+   ៣. Form Container (ប្រអប់ Form បែបកញ្ចក់ថ្លា)
+-------------------------------------------------- */
+.form-container {
+   background:#0A192F;
+    backdrop-filter: blur(10px); /* ធ្វើឲ្យផ្ទៃខាងក្រោយ Blur បែប Glassmorphism */
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgb(231, 226, 132);
+    width: 100%;
+    max-width: 460px;
+    border: 1px solid #D4Af37;
+}
+.lang-container {
+    top: 20px;
+    right: 20px;
+}
+.form-container h3 {
+    text-align: center;
+    color: #D4AF37; /* ពណ៌ស្វាយ/ខៀវបែប Art */
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: Khmer OS Muol Light;
+}
+/* --------------------------------------------------
+   ៤. Input & Label Styles (ប្រអប់បញ្ចូលទិន្នន័យ)
+-------------------------------------------------- */
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+}
+.lang-container{
+    margin-bottom: 20px;
+}
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group input[type="tel"],
+.input-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #0000;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #000000;
+    background-color: #f8fafc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+/* Effect ពេលអ្នកចុចលើប្រអប់ (Focus) */
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #dedee5;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+/* --------------------------------------------------
+   ៥. Radio Buttons (ភេទ)
+-------------------------------------------------- */
+.radio-group {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 5px 0;
+}
+.radio-group label {
+    font-weight: normal;
+    cursor: pointer;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.radio-group input[type="radio"] {
+    accent-color: #6366f1; /* ដូរពណ៌ Radio Button */
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    /* ពណ៌ Gradient ពីស្វាយទៅកុលាប (Purple-Rose Gradient) */
+    background: linear-gradient(135deg,#C5A059);
+    color: rgb(#0A192F);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #db2777 100%);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+    transform: translateY(-2px);
+}
+.submit-btn:active {
+    transform: translateY(0);
+}

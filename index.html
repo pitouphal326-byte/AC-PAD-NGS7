@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="doc-title">ទម្រង់ចុះឈ្មោះចូលក្លឹបសិល្បៈ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h3 id="welcome-msg">សូមស្វាគមន៍មកកាន់ក្លឹបសិល្បៈ</h3>
+        <h3 id="form-title">ចុះឈ្មោះដើម្បីប្រឡងចូលក្លឹប</h3>     
+        <form id="artClubForm">
+            <div class="input-group">
+                <label for="fullname" id="lbl-fullname">នាមត្រកូល និងនាមខ្លួន៖</label>
+                <input type="text" id="fullname" name="ឈ្មោះពេញ" placeholder="បញ្ចូលឈ្មោះពេញ..." required>
+            </div>   
+            <div class="input-group">
+                <label id="lbl-gender">ភេទ៖</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="ភេទ" value="ប្រុស" required> <span id="opt-male">ប្រុស</span></label>
+                    <label><input type="radio" name="ភេទ" value="ស្រី" required> <span id="opt-female">ស្រី</span></label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="dob" id="lbl-dob">ថ្ងៃខែឆ្នាំកំណើត(ដាក់ថ្ងៃខែឆ្នាំកំណើតពិតប្រាកដ)៖</label>
+                <input type="date" id="dob" name="ថ្ងៃខែឆ្នាំកំណើត" required>
+            </div>        
+            <div class="input-group">
+                <label for="grade" id="lbl-grade">ថ្នាក់ទី៖</label>
+                <select id="grade" name="ថ្នាក់" required>
+                    <option value="" disabled selected id="opt-grade-default">-- ជ្រើសរើសថ្នាក់ទី --</option>
+                    <option value="7A">7A</option>
+                    <option value="7B">7B</option>
+                    <option value="7C">7C</option>
+                    <option value="7D">7D</option>
+                    <option value="7E">7E</option>
+                    <option value="7F">7F</option>
+                    <option value="7G">7G</option>
+                    <option value="7H">7H</option>
+                    <option value="8A">8A</option>
+                    <option value="8B">8B</option>
+                    <option value="8C">8C</option>
+                    <option value="8D">8D</option>
+                    <option value="8E">8E</option>
+                    <option value="8F">8F</option>
+                    <option value="8G">8G</option>
+                    <option value="9A">9A</option>
+                    <option value="9B">9B</option>
+                    <option value="9C">9C</option>
+                    <option value="9D">9D</option>
+                    <option value="9E">9E</option>
+                    <option value="9F">9F</option>
+                    <option value="10A">10A</option>
+                    <option value="10B">10B</option>
+                    <option value="10C">10C</option>
+                    <option value="10D">10D</option>
+                    <option value="10E">10E</option>
+                    <option value="10F">10F</option>
+                    <option value="10G">10G</option>
+                    <option value="10H">10H</option>
+                    <option value="10I">10I</option>
+                    <option value="10J">10J</option>
+                    <option value="10K">10K</option>
+                    <option value="11A">11A</option>
+                    <option value="11B">11B</option>
+                    <option value="11C">11C</option>
+                    <option value="11D">11D</option>
+                    <option value="11E">11E</option>
+                    <option value="11F">11F</option>
+                    <option value="11G">11G</option>
+                    <option value="11H">11H</option>
+                </select>
+            </div>          
+            <div class="input-group">
+                <label for="skill" id="lbl-skill">ផ្នែក(របាំ....)៖</label>
+                <select id="skill" name="ផ្នែក" required>
+                    <option value="" disabled selected id="opt-skill-default">-- ជ្រើសរើសផ្នែក --</option>
+                    <option value="ប្រពៃណី" id="opt-skill-1">ប្រពៃណី</option>
+                    <option value="របាំ" id="opt-skill-2">របាំ</option>
+                    <option value="ភ្លេង" id="opt-skill-3">ភ្លេង</option>
+                    <option value="សម្តែងរឿង" id="opt-skill-4">សម្តែងរឿង</option>
+                    <option value="K-pop">K-pop</option>
+                    <option value="ចម្រៀង" id="opt-skill-5">ចម្រៀង</option>
+                    <option value="ញ៉ាក់ខ្មែរ" id="opt-skill-6">ញ៉ាក់ខ្មែរ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="phone" id="lbl-phone">លេខទូរស័ព្ទ(ប្រើប្រាស់ Telegram)៖</label>
+                <input type="tel" id="phone" name="លេខទូរស័ព្ទ" placeholder="000 000 000" pattern="[0-9]{9,10}" required>
+            </div>
+            <!-- បានកែប្រែ id="btn-subm+it" មកជា id="btn-submit" -->
+            <button type="submit" class="submit-btn" id="btn-submit">ចុះឈ្មោះ</button>
+        </form>
+    </div>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxhIfzV5odjZViYF4gE-YJFRfP3WNI4jdcd6L95fWYq-Uq_Pk5G15pntQxPt-XR3yTe/exec';
+    const form = document.getElementById('artClubForm');
+    const submitBtn = document.getElementById('btn-submit');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'កំពុងបញ្ចូលព័ត៌មាន...';
+
+        fetch(scriptURL, { 
+            method: 'POST', 
+            mode: 'no-cors', // ជួយការពារបញ្ហា CORS Blocking របស់ Browser
+            body: new FormData(form) 
+        })
+        .then(() => {
+            alert('សូមអរគុណ🙏!សម្រាប់ការចុះឈ្មោះចូលក្លឹប ការចុះឈ្មោះរបស់អ្នកទទួលបានជោគជ័យ។');
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'ចុះឈ្មោះ';
+            form.reset();
+        })
+        .catch(error => {
+            alert('មានបញ្ហាក្នុងការផ្ញើទិន្នន័យ៖ ' + error.message);
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'ចុះឈ្មោះ';
+        });
+    });
+    </script>
+</body>
+</html>
